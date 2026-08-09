@@ -1,0 +1,8 @@
+How JWT Authentication Work
+1. User Logs in
+2. Server verifies credentials
+3. JWT generated
+4. Client Stores token
+5. Client sends token with request
+6. Server validates token
+7. Access granted

@@ -1,0 +1,20 @@
+1.  pip install alembic
+2.  alembic init alembic # init alembic/othersname
+3.  alembic revision -m "Phone Number Column adding for our user table"
+===========================================================
+###   Alembic file (alembic.ini) // link my sql file =======
+sqlalchemy.url = postgresql://postgres:1808@localhost/TodoApplicationDatabase
+###   ID:Phone Number Column adding for our user table =========
+def upgrade() -> None:
+    op.add_column("users", sa.Column('phone_number', sa.String, nullable=True)) # nullable must be true because already users table has user data without phone number
+    # """Upgrade schema."""
+    # pass
+###   env.py =========
+import models
+# if config.config_file_name is not None: // comment this line
+fileConfig(config.config_file_name)
+
+target_metadata = models.Base.metadata
+
+==========================================================
+4.  alembic upgrade 0b7e9ea0e1d0
