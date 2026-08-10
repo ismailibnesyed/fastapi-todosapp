@@ -11,8 +11,7 @@ SQLALCHEMY_DATABASE_URL = 'postgresql://postgres.gkelvtwveftrpmocmyaf:[ismail_18
 # SQLALCHEMY_DATABASE_URL = 'sqlite:///./todosapp.db'  # SQLite database URL
 
 # Create the engine that talks to the database
-# engine = create_engine(SQLALCHEMY_DATABASE_URL) # sql lite er jonno
-engine = create_engine(SQLALCHEMY_DATABASE_URL) # postgreSQL ar jonno
+engine = create_engine(SQLALCHEMY_DATABASE_URL) 
 
 # Create session factory for database requests
 SessionLocal = sessionmaker(autoflush=False, autocommit=False, bind=engine)
