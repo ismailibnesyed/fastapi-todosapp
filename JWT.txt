@@ -6,3 +6,8 @@ How JWT Authentication Work
 5. Client sends token with request
 6. Server validates token
 7. Access granted
+
+
+-------------------
+uvicorn main:app --host 0.0.0.0 --port 10000
+----------
